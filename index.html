@@ -2,22 +2,145 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ABC Challenge</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="./style/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ABC Challenge</title>
+  <!-- Custom CSS sin Bootstrap -->
+  <script src="src/script.js"></script>
+  <link rel="stylesheet" href="style/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./style/style.css">
 </head>
 
-<body>
-    <main class="container">
-        <div id="container" class="row g-4">
+<body class="cuerpo-pagina">
+  <!-- Navbar -->
+  <nav class="barra-navegacion">
+    <div class="contenedor-navbar">
+      <span class="titulo-proyecto">ABC Challenge</span>
+      <div class="contenedor-contador">
+        <span class="texto-contador">Letras descubiertas:</span>
+        <span id="contador" class="numero-contador">0</span>
+      </div>
+    </div>
+  </nav>
 
+  <main class="container">
+    <!-- Filtros -->
+    <section class="seccion-filtros">
+      <button class="boton-filtro" onclick="filtrar('todas')">Todas</button>
+      <button class="boton-filtro" onclick="filtrar('vocales')">Vocales</button>
+    </section>
+
+    <!-- Galería de Letras (Solo G a M) -->
+    <section class="seccion-galeria">
+      <!-- Contenedor del Grid -->
+      <div class="grilla-letras">
+
+        <!-- Letra G -->
+        <div class="card carta-letra" data-tipo="consonante" onclick="voltear(this)">
+          <div class="card-frente">
+            <h1 class="texto-letra">G</h1>
+          </div>
+          <div class="card-dorso">
+            <img src="src/assets/images/g.png" alt="Gato" class="imagen-representativa">
+            <h3 class="texto-palabra">Gato</h3>
+          </div>
         </div>
-    </main>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="./src/main.js"></script>
+        <!-- Letra H -->
+        <div class="card carta-letra" data-tipo="consonante" onclick="voltear(this)">
+          <div class="card-frente">
+            <h1 class="texto-letra">H</h1>
+          </div>
+          <div class="card-dorso">
+            <img src="src/assets/images/h.png" alt="Hipopótamo" class="imagen-representativa">
+            <h3 class="texto-palabra">Hipopótamo</h3>
+          </div>
+        </div>
+
+        <!-- Letra I (Vocal) -->
+        <div class="card carta-letra" data-tipo="vocal" onclick="voltear(this)">
+          <div class="card-frente">
+            <h1 class="texto-letra">I</h1>
+          </div>
+          <div class="card-dorso">
+            <img src="src/assets/images/i.png" alt="Iguana" class="imagen-representativa">
+            <h3 class="texto-palabra">Iguana</h3>
+          </div>
+        </div>
+
+        <!-- Letra J -->
+        <div class="card carta-letra" data-tipo="consonante" onclick="voltear(this)">
+          <div class="card-frente">
+            <h1 class="texto-letra">J</h1>
+          </div>
+          <div class="card-dorso">
+            <img src="src/assets/images/j.png" alt="Jirafa" class="imagen-representativa">
+            <h3 class="texto-palabra">Jirafa</h3>
+          </div>
+        </div>
+
+        <!-- Letra K -->
+        <div class="card carta-letra" data-tipo="consonante" onclick="voltear(this)">
+          <div class="card-frente">
+            <h1 class="texto-letra">K</h1>
+          </div>
+          <div class="card-dorso">
+            <img src="src/assets/images/k.png" alt="Koala" class="imagen-representativa">
+            <h3 class="texto-palabra">Koala</h3>
+          </div>
+        </div>
+
+        <!-- Letra L -->
+        <div class="card carta-letra" data-tipo="consonante" onclick="voltear(this)">
+          <div class="card-frente">
+            <h1 class="texto-letra">L</h1>
+          </div>
+          <div class="card-dorso">
+            <img src="src/assets/images/l.png" alt="León" class="imagen-representativa">
+            <h3 class="texto-palabra">León</h3>
+          </div>
+        </div>
+
+        <!-- Letra M -->
+        <div class="card carta-letra" data-tipo="consonante" onclick="voltear(this)">
+          <div class="card-frente">
+            <h1 class="texto-letra">M</h1>
+          </div>
+          <div class="card-dorso">
+            <img src="src/assets/images/m.png" alt="Mono" class="imagen-representativa">
+            <h3 class="texto-palabra">Mono</h3>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <section class="container">
+    <div id="container" class="row g-4">
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./src/main.js"></script>
+
+  <!-- Sección Equipo -->
+  <footer class="pie-pagina">
+    <div class="contenedor-equipo">
+      <h4 class="titulo-equipo">Equipo</h4>
+      <ul class="lista-equipo">
+        <li class="miembro-equipo">Jorge Perdomo</li>
+        <li class="miembro-equipo">Diego Moreno</li>
+        <li class="miembro-equipo">Andres Satoba</li>
+        <li class="miembro-equipo">Argie Rincon</li>
+      </ul>
+    </div>
+  </footer>
+
+</html>
+
+<!-- JS -->
 </body>
+
 </html>
