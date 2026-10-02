@@ -1,5 +1,68 @@
-/* Respetando la regla: NO PONER ESTILOS DIRECTAMENTE EN ETIQUETAS, SOLO EN CLASES */
+main {
+    padding: 40px 20px;
+}
 
+.card {
+    height: 280px;
+    position: relative;
+    cursor: pointer;
+    border: none;
+    border-radius: 24px;
+    transform-style: preserve-3d;
+    transition: .6s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card.volteada {
+    transform: rotateY(180deg);
+}
+
+.card-frente,
+.card-dorso {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+}
+
+.card-frente {
+    box-shadow: 0 10px 25px #0002;
+    background: linear-gradient(135deg, #7c4dff, #00bcd4);
+    color: white;
+}
+
+.card-frente h1 {
+    font-size: 100px;
+    margin: 0;
+    font-weight: bold;
+}
+
+.card-dorso {
+    box-shadow: 0 10px 25px #0002;
+    background: white;
+    transform: rotateY(180deg);
+    padding: 15px;
+}
+
+.card-dorso img {
+    width: 170px;
+    height: 170px;
+    object-fit: contain;
+}
+
+.card-dorso h3 {
+    margin: 10px 0 0;
+    color: #7c4dff;
+    font-weight: bold;
+}
+
+/* Respetando la regla: NO PONER ESTILOS DIRECTAMENTE EN ETIQUETAS, SOLO EN CLASES */
 .cuerpo-pagina {
     background-color: #f0f4f8;
     min-height: 100vh;
@@ -46,7 +109,7 @@
     font-size: 1.1rem;
 }
 
-/* ================== PRINCIPAL ================== */
+/* ================== PRINCIPAL GALERYA GM ================== */
 .contenedor-principal {
     max-width: 1200px;
     margin: 2rem auto;
@@ -117,12 +180,10 @@
     border: 3px solid #e2e8f0;
     
     /* Flexbox centrado interno */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 1.5rem;
 }
+
+
+/* ---------- SEGUNDO CHECK */
 
 .card-frente {
     transform: rotateY(0deg);
