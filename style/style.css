@@ -152,6 +152,10 @@ main {
     justify-content: center;
 }
 
+.seccion-galeria {
+    margin-top: 2rem;
+}
+
 .carta-letra {
     background-color: transparent;
     perspective: 1000px;
